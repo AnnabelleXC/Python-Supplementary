@@ -1,0 +1,92 @@
+'''
+题目1: 代码填空，提示需要补充两处
+已知一组数据规律如下：
+1，-2，3，-4，5，-6，7，-8.......-100
+求出这些数字加起来的和 sum = 1-2+3-4......-100
+
+num = []
+total = 0
+# 将一组数放到空列表num中
+for i in range(1,101):
+    if i%2 ==0:
+        num.append(-i)
+    else:
+# 数字求和        
+for j in num:
+  total += 
+print("1-2+3-4......-100 = ",total)
+
+
+
+
+题目2: “判断季节”，代码填空，提示需要补充三处
+用户输入月份,判断这个月是哪个季节。
+分析：3，4，5月----春季  6，7，8----夏季   9，10，11---秋季  12，1，2----冬季 
+
+# 接收用户输入的月份
+month = int(input('请输入月份:'))
+
+# 定义列表
+spring = [3,4,5]
+summer = []
+fall = []
+winter = []
+
+# 判断输入的月份属于哪个季节
+# 列表的特性：成员操作符 in 判断元素是否在列表中
+if month in spring:
+    print('%d月是春天' % month)
+elif month in summer:
+    print('%d月是夏天' % month)
+elif month in fall:
+    print('%d月是秋天' % month)
+elif month in winter:
+    print('%d月是冬天' % month)
+else:
+    print('请输入正确的月份')
+
+
+
+
+题目3：“简单购物车程序”，代码填空，提示需要补充两处
+
+products = [[0, 'iphone8', 6888], [1, 'MacPro', 14888], [2, '小米6', 2499], [3, 'Coffe', 31], [4, 'Book', 80], [5, 'Nike Shoes', 799]]
+print("---------------商品列表--------------")
+for i in products:
+    print(i)
+print("----开始购物，本店限购3件特价商品----")
+shop = []
+count = 
+while True:
+    choice = int(input('请选择您想要买的商品的编号：'))
+    if choice >= 0 and choice < len(products):
+        shop.append(products[choice])
+        print("您选购的商品 %s 已加入购物车"% products[choice])
+        count -= 
+        if count == 0:
+            print("------购物结束，欢迎下次再来------")
+            break      
+    else:
+        print("您所选购的商品不存在，请重新选择")
+        continue
+
+
+
+题目4：选择题 list=["HAIDIAN","XINXI",1997,2018],则list[-1]的值为()
+A. 8
+B. 2018
+C. 7
+D. 1997
+
+
+
+题目5：选择题 运行如下所示程序，结果是()。
+list_1 = ['Scrach','Python','C++']
+print(len(list_1))
+A. 3
+B. 4
+C. 5
+D. 2
+
+
+'''
