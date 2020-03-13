@@ -11,6 +11,7 @@ for i in range(1,101):
     if i%2 ==0:
         num.append(-i)
     else:
+    
 # 数字求和        
 for j in num:
   total += 
