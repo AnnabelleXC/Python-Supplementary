@@ -1,0 +1,61 @@
+题目1：有四个数字：1、2、3、4，能组成多少个互不相同且无重复数字的三位数？各是多少？
+
+count = 0
+for f in range(1,5):
+    for s in range(1,5):
+        for t in range(1,5):
+            if f != s and f != t and s != t:
+                print(f,s,t)
+                count += 1
+print(count)
+
+
+
+题目2：输入三个整数，输出最大值
+
+
+ls = []
+for i in range(3):
+    a = int(input('Please enter a number:'))
+    ls.append(a)
+print(ls)
+big = ls[0]
+for j in ls:
+    if j > big:
+        big = j
+print('The Maximum number is:',big)
+
+
+
+
+题目3：输入三个整数，输出最小值
+
+ls = []
+for i in range(3):
+    a = int(input('Please enter a number:'))
+    ls.append(a)
+print(ls)
+small = ls[0]
+for j in ls:
+    if j < small:
+        small = j
+print('The Minimum number is:',small)
+
+
+题目4：判断101-200之间有多少个偶数，并输出所有偶数。（for循环）
+
+count = 0
+for i in range(101,201):
+    if i % 2 == 0:
+        print(i)
+        count += 1
+print(count)
+
+
+题目5：表达式[1,2,3]*3得执行结果是：
+
+[1,2,3,1,2,3,1,2,3]
+
+题目6：Python语句list(range(1,10,3))执行结果为：
+
+[1,4,7]
