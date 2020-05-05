@@ -5,10 +5,34 @@
 这样不断循环下去，圈子里的人将不断减少。由于人的个数是有限的，因此最终会剩下一个人。试问最后剩下的人最开始的编号。
 基本要求:输入一个正整数n，表示人的个数。输出一个正整数,它表示经过“一二三四一二三四”报数后最后剩下的人的编号。
 
+index = 0
+people = []
+n = int(input("请输入人的个数n："))
+
+for i in range(n):
+    people.append(i)
+    
+for j in range(n-1):
+    index=(index + 3)%len(people)
+    people.pop(index)
+print("最后剩下的人的编号是：",people[0])
 
 题目2：一堆猴子都有编号，编号是0，1，2，3 ...num-1，这群猴子（num个）按照0-num-1的顺序围坐一圈，从第1开始数，每数到第n个，
 该猴子就要离开此圈，这样依次下来，直到圈中只剩下最后一只猴子，则该猴子为大王。
 基本要求:（1）输入数据：输入num,n (m,n 为整数，n<m)（2）中文提示输入num个猴子，数n个数，输出为大王的猴子是几号
 设计一个程序来实现以上功能。
+
+index = 0
+monkeys = []
+num = int(input("请输入猴子总数m："))
+n = int(input("请输入n,(n为整数，n<m)："))
+
+for i in range(num):
+    monkeys.append(i)
+    
+for j in range(num-1):
+    index=(index + n - 1)%len(monkeys)
+    monkeys.pop(index)
+print("为大王的猴子编号是：",monkeys[0])
 
 '''
