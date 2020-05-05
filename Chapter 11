@@ -13,9 +13,9 @@ a = 10
 b = 2
 list = [1, 2, 3, 4, 5 ]
 if a in list or b in list:
-    print ("变量a 在给定的列表中list中")
+    print ("变量a或b在给定的列表中list中")
 else:
-    print ("变量a 不在给定的列表中list中") 
+    print ("变量a或b不在给定的列表中list中") 
 
 
 题目3:使用成员运算符写出 “判断季节”的程序
