@@ -10,9 +10,9 @@ print('肥鱼' in name)
 题目2：写出输出结果
 
 a = 10
-b = 20
+b = 2
 list = [1, 2, 3, 4, 5 ]
-if a in list:
+if a in list or b in list:
     print ("变量a 在给定的列表中list中")
 else:
     print ("变量a 不在给定的列表中list中") 
