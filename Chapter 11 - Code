@@ -1,0 +1,21 @@
+'''
+#True
+#False
+
+#变量a或b在给定的列表中list中
+
+s=[3,4,5]
+su=[6,7,8]
+a=[9,10,11]
+w=[12,1,2]
+q=int(input("请输入："))
+if q in s:
+    print("春")
+elif q in su:
+    print("夏")
+elif q in a:
+    print("秋")
+elif q in w:
+    print("冬")
+
+'''
