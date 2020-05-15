@@ -32,18 +32,27 @@ else:
 备注：3，4，5月----春季  6，7，8----夏季   9，10，11---秋季  12，1，2----冬季
 
 
-s=[3,4,5]
-su=[6,7,8]
-a=[9,10,11]
-w=[12,1,2]
-q=int(input("请输入："))
-if q in s:
-    print("春")
-elif q in su:
-    print("夏")
-elif q in a:
-    print("秋")
-elif q in w:
-    print("冬")
+# 接收用户输入的月份
+month = int(input('请输入月份:'))
+
+# 定义列表
+spring = [3,4,5]
+summer = [6,7,8]
+fall = [9,10,11]
+winter = [12,1,2]
+
+# 判断输入的月份属于哪个季节
+# 列表的特性：成员操作符 in 判断元素是否在列表中
+if month in spring:
+    print('%d月是春天' % month)
+elif month in summer:
+    print('%d月是夏天' % month)
+elif month in fall:
+    print('%d月是秋天' % month)
+elif month in winter:
+    print('%d月是冬天' % month)
+else:
+    print('请输入正确的月份')
+
 
 '''
