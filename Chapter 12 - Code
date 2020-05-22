@@ -1,0 +1,75 @@
+'''
+
+
+# 无标准答案，示例如下
+import random
+
+harmful_waste = ["废电池", "过期药品", "杀虫喷雾罐","染发剂壳", "日光灯管", "水银体温计"]
+kitchen_waste = ["菜叶", "剩菜", "剩饭", "果皮","蛋壳", "茶渣", "骨头"]
+other_waste = ["砖瓦陶瓷", "渣土","卫生间废纸", "瓷器碎"]
+recoverable_waste = ["衣服", "毛巾", "报纸", "纸盒", "塑料袋", "矿泉水瓶","塑料玩具", "玻璃饮料瓶", "镜片", "易拉罐", "金属罐头盒"]
+
+waste_list = [['有害垃圾',harmful_waste], ['厨余垃圾',kitchen_waste], ['其他垃圾',other_waste], ['可回收垃圾',recoverable_waste]]
+wrong_list = []
+
+while True:
+    choice = input('''请输入选项: 
+            s. 开始玩游戏
+            h. 帮助
+            q. 结束游戏\n''')
+    if choice == "q":
+        break
+    elif choice == "s":
+        count = 0
+        for i in range(5):
+            print("*************GAME START*************")
+            print('总共5关，每关5分。现在是第',i+1,'关' )
+            score = 5
+            for j in range(5):
+                waste_type = random.randint(0, 3)
+                if waste_type == 0:
+                    wt = "有害垃圾"
+                    question = random.choice(harmful_waste)
+                elif waste_type == 1:
+                    wt = "厨余垃圾"
+                    question = random.choice(kitchen_waste)
+                elif waste_type == 2:
+                    wt = "其它垃圾"
+                    question = random.choice(other_waste)
+                elif waste_type == 3:
+                    wt = "可回收垃圾"
+                    question = random.choice(recoverable_waste)
+                
+                print("请将 %s 分类，0：有害垃圾； 1：厨余垃圾；2：其它垃圾；3：可回收垃圾" % question)
+                classification = int(input("请输入你的选择："))
+                if classification == waste_type:
+                    print("答对了，继续加油！目前的分数是 %d" % score)
+                else:
+                    wrong_list.append([wt, question])
+                    score -= 1
+                    print("很可惜，答错了.%s 是 %s，已将 %s 加入错题本.目前的分数是 %d." % (question, wt, question,score))
+            
+            if score == 0:
+                break
+            count += 1
+        # 输出错题本
+        '''if len(wrong_list) > 0:
+            print("你错了 %d 题，现在来复习一下" % len(wrong_list))
+            for i in wrong_list:             
+                print("%s 是 %s" % (i[1], i[0]))
+            wrong_list.clear()'''
+        if count == 5:
+            print("恭喜你完成5关，获得环保小达人的称号！(●'◡'●)'")
+            exit()
+        else:
+            print('总共5关，你的成绩是第',count,'关' )
+        
+    elif choice == "h":
+        print("有害垃圾、厨余垃圾、其他垃圾、可回收垃圾举例如下: ")
+        for i in waste_list:
+            print(i[0],'有',i[1],'等')
+    else:
+        print("错误选项，请重新输入！")
+
+
+'''
