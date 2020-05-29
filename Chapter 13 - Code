@@ -1,0 +1,61 @@
+'''
+题目1：编写一个名为display_message()的函数，它打印一个句子，句子内容是你在本节课学的是什么。
+调用这个函数，确认显示的消息正确无误。
+
+
+def display_message():
+    print("本节课我学会了函数的创建和调用。")
+display_message()
+
+
+题目2：喜欢的图书
+编写一个名为favourite_book()的函数，其中包含一个名为title的形式参数。这个函数打印一条消息，
+如One of my favourite book is Alice in Wonderland。调用这个函数，并将一本图书的名字作为实际参数传递给它。
+
+
+def favourite_book(title):
+    print("One of my favourite book is",title)
+favourite_book("Alice in Wonderland")
+
+
+题目3：
+Lukas想制作一个列表来统计班里所有同学的成绩，他已经写好了一个列表，但是他突然发现忘了把自己的成绩加进去，
+已知他的成绩为95，你能帮他使用一行语句把他的成绩也加进列表中吗？
+score = [67,88,93,99,74]
+________________  #用一个语句把Lukas的95分加进score列表中
+
+
+score = [67,88,93,99,74]
+score.append(95)
+
+
+题目4：
+Lukas制作了一个列表score来保存班里所有同学的成绩，通过学号就可以和列表中保存的成绩对应起来（比如1号同学的成绩就是score[1]），
+已知Lukas的学号是5，你能帮他使用一行代码把成绩列表中对应的元素打印出来吗？
+score = [0,67,88,93,99,74,99]
+print(____________)
+
+
+score = [0,67,88,93,99,74,99] 
+print(score[5]) 
+
+
+题目5：
+Lukas有一个全班同学成绩的列表，让你写一段程序找出这次的最低分，并把最低分打印出来，把下面程序完成吧！
+score = [45,98,65,77,89,93,84]
+___________    #在这里给small初始赋值
+for i in score:
+__________:    #在这里判断大小
+    small = i
+print(small)
+
+
+score = [45,98,65,77,89,93,84]
+small=score[0]    #在这里给small初始赋值 
+for i in score: 
+    if i < small:    #在这里判断大小 
+        small = i 
+print(small) 
+
+
+'''
