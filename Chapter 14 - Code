@@ -1,0 +1,58 @@
+'''
+
+题目1：T恤
+编写一个名为make_shirt()的函数，它接受一个尺码以及要印在T恤上的字样。这个函数应
+打印一个句子，概要地说明T恤的尺码和字样。
+
+
+def make_shirt(size,msg):
+    if msg == '':
+        print('这件t恤衫的尺寸是：' + size + '； 印花文字为：' + '空')
+    else:
+        print('这件t恤衫的尺寸是：' + size + '；印花文字为：' + msg)
+make_shirt('XXXL','')
+make_shirt('XXXL',msg = 'hello_world!')
+
+
+
+题目2：小星星
+设计一个函数，根据输入参数（行数）不同，输出对应的图形：
+*
+***
+*****
+*******
+
+
+def star(row):
+    for i in range(1,row+1):
+        for j in range(i):
+            print("*",end ="")
+        print()
+
+star(4)
+
+
+题目2(选做)：小星星
+设计一个函数，根据输入参数（行数）不同，输出对应的图形：
+   *
+  ***
+ *****
+*******
+
+
+def star(row):
+    for i in range(1,row+1):
+        for j in range(row-i):
+            print(" ",end="")
+        for k in range(2*i-1):
+            print("*",end ="")
+        print()
+star(4)
+star(6)
+
+
+
+题目3：优化项目《小乌龟放礼花》。提示:使用函数，修改程序使更简洁或增加新功能
+
+答案不唯一，自行发挥创意设计
+'''
